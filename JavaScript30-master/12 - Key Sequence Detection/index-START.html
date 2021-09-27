@@ -7,6 +7,21 @@
 </head>
 <body>
 <script>
+
+const pressedKey = [];
+const secretWord = 'katia';
+
+window.addEventListener('keyup', (event) => {
+// console.log(event);
+pressedKey.push(event.key);
+// console.log(pressedKey);
+pressedKey.splice(-secretWord -1, pressedKey.length - secretWord.length);
+if(pressedKey.join('').includes(secretWord)) {
+  console.log("It contains the secret word");
+  cornify_add();
+}
+console.log(pressedKey);
+})
 </script>
 </body>
 </html>
